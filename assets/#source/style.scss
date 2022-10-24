@@ -1,0 +1,568 @@
+// Подключение 
+@import'_fonts.scss';
+@import'_variables.scss';
+@import '_nullstyle.scss';
+//-------
+
+
+.header {
+    padding: 33px 0;
+    background-color: $bg-header;
+    position: fixed;
+    width: 100%;
+
+    &__container {
+        @include flex-cont($jus: space-between);
+	}
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 3.5%;
+
+    @media (min-width: 2232px) {
+        padding: 0 2.5%;
+    }
+}
+
+.nav {
+	&__list {
+        @include flex-cont;
+	}
+
+	&__item {
+        margin: 0 30px;
+    }
+
+	&__link {
+        font: 400 13px 'Roboto', sans-serif;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: $cl-wt;
+        transition: all 0.3s ease;
+        
+        &_active,
+        &:hover {
+            color: $cl-bl;
+        }
+	}
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
+.promo {
+    padding: 203px 0 203px 0;
+    background-image: url('./../images/promo-bg.png');
+    background-position: -20px -290px;
+    background-repeat: no-repeat;
+    z-index: 9999;
+    
+
+    &__title {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 58px;
+        text-transform: uppercase;
+        margin-bottom: 90px;
+    }
+
+    &__description {
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 80px;
+    }
+
+    &__text {
+        font-weight: 700;
+        margin-bottom: 9px;
+    }
+
+    &__item {
+        list-style-type: " -  ";
+        margin: 0 0 5px 20px;
+    }
+
+    &__button {
+        margin-right: 25px;
+    }
+}
+
+.text-color {
+    color: $cl-bl;
+}
+
+.button {
+    width: 183px;
+    padding: 13px 0;
+    color: $cl-wt;
+    text-transform: uppercase;
+    background-color: $cl-bl;
+    border: 1px solid $cl-wt;
+    border-radius: 4px;
+    transition: all 0.3s ease-in;
+
+    &:hover {
+        color: $cl-blk;
+        background-color: $cl-wt;
+        border: 1px solid $cl-blk;    
+    }
+
+    &_white {
+        color: $cl-blk;
+        background-color: $cl-wt;
+        border: 1px solid $cl-blk;
+
+        &:hover {
+            color: $cl-wt;
+            background-color: $cl-bl;
+            border: 1px solid $cl-wt;
+        }
+        
+    }
+}
+
+.order {
+    background-color: $bg-order;
+    background-image: url('../images/order-bg.png');
+    margin-top: -1px;
+    padding: 119px 0 152px;
+    color: $cl-wt;
+    z-index: 0;
+
+    &__container {
+        @include flex-cont($dir: column);
+    }
+
+    &__steps-wrapper {
+        width: 100%;
+        @include flex-cont($ali: flex-start);
+        margin-bottom: 86px;
+        position: relative;
+
+        @media (max-width: 740px) {
+            @include flex-cont($dir: column, $jus: flex-start);
+        }
+    }
+
+	&__step {
+        width: 20%;
+        @include flex-cont($dir: column);
+
+        @media (max-width: 740px) {
+            width: 70%;
+            margin-bottom: 50px;
+            @include flex-cont($dir: row, $jus: flex-start);
+        }
+	}
+
+	&__icon {
+        @include flex-cont;
+        width: 100px;
+        height: 100px;
+        background-color: $cl-bl;
+        border: 5px solid #14317B;
+        border-radius: 100px;
+        margin-bottom: 20px;
+
+        &_1::after,
+        &_2::after,
+        &_3::after,
+        &_4::after,
+        &_5::after {
+            position: absolute;
+            content: '';
+            width: 55px;
+            height: 55px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+		&_1::after {
+            background-image: url('../icons/order-step1.svg');
+		}
+
+		&_2::after {
+            background-image: url('../icons/order-step2.svg');
+		}
+		&_3::after {
+            background-image: url('../icons/order-step3.svg');
+		}
+
+		&_4::after {
+            background-image: url('../icons/order-step4.svg');
+		}
+
+		&_5::after {
+            background-image: url('../icons/order-step5.svg');
+		}
+
+        @media (max-width: 1168px) {
+            width: 80px;
+            height: 80px;
+
+            &_1::after,
+            &_2::after,
+            &_3::after,
+            &_4::after,
+            &_5::after {
+                width: 35px;
+                height: 35px;
+            }
+        }
+
+        @media (max-width: 870px) {
+            width: 70px;
+            height: 70px;
+
+            &_1::after,
+            &_2::after,
+            &_3::after,
+            &_4::after,
+            &_5::after {
+                width: 25px;
+                height: 25px;
+            }
+        }
+
+        @media (max-width: 740px) {
+            margin-bottom: 0;
+        }
+	}
+
+	&__description {
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        padding: 0 22px;
+
+        @media (max-width: 870px) {
+            font-size: 14px;
+        }
+	}
+
+    &__dotted {
+        position: absolute;
+        width: 70%;
+        height: 6px;
+        background-image: url('../icons/order-dotted.svg');
+        left: 15%;
+        top: 50px;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        @media (max-width: 1168px) {
+            top: 35px;
+            width: 70.2%;
+        }
+
+        @media (max-width: 953px) {
+            width: 70.3%;
+        }
+
+        @media (max-width: 740px) {
+            transform: rotate(90deg);
+            width: 60%;
+            left: -10%;
+            top: 270px;
+        }
+    }
+}
+
+.title {
+    font: 400 36px 'Roboto', sans-serif;
+    line-height: 42px;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+}
+
+.subtitle {
+    font-size: 20px;
+    line-height: 24px;
+    color: $cl-d-gr;
+    margin-bottom: 80px;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: 30px;
+    width: 100%;
+
+    &__item {
+        &_4 {
+            grid-column: span 2;
+        }
+
+        &_5 {
+            position: relative;
+	        display: inline-block;
+        }
+
+        &_6 {
+            grid-column-start: 2;
+            grid-column-end: 3;
+        }
+    }
+
+    &__input {
+        width: 100%;
+        color: $bg-order;
+        font-size: 18px;
+        border-radius: 3px;
+        background: rgba(255, 255, 255, 0.85);
+        padding: 13px 10px;
+        transition: all 0.5s ease;
+
+        &::placeholder {
+            color: $bg-order;
+            font-size: 18px;
+        }
+
+        &_email,
+        &_name {
+            &:focus {
+                background: $bg-footer;
+                color: $cl-wt;
+    
+                &::placeholder {
+                    color: $cl-gr;
+                }
+            }
+        }
+
+        &_range {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 6px !important;
+            padding: 0;
+            margin: 20px 0 10px;
+            border: 1px solid $cl-wt;
+            border-radius: 5px;  
+            background: rgba(255, 255, 255);
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .3s;
+            transition: all 0.3s;
+
+            &:hover {
+                opacity: 1;
+            }
+            
+            &::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 27px;
+                height: 27px;
+                border-radius: 50%; 
+                background: $cl-bl;
+                border: 3px solid #14317B;
+                cursor: pointer;
+            }
+            
+            &::-moz-range-thumb {
+                width: 27px;
+                height: 27px;
+                border-radius: 50%;
+                background: $cl-bl;
+                border: 3px solid #14317B;
+                cursor: pointer;
+            }
+        }
+
+        &_file {
+            position: absolute;
+	        z-index: -1;
+	        opacity: 0;
+	        display: block;
+	        width: 0;
+	        height: 0;  
+        }
+    }
+
+    &__select {
+        width: 100%;
+        color: $bg-order;
+        font-size: 18px;
+        border-radius: 3px;
+        background: rgba(255, 255, 255, 0.85);
+        padding: 13px 10px;
+        transition: all 0.3s ease;
+    }
+
+    &__label {
+        @include flex-cont($jus: space-between);
+    }
+
+    &__description {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    &__percents {
+        font: italic 100 18px 'Roboto', sans-serif;
+        color: rgba(255, 255, 255, 0.85);
+    }
+
+    &__btn-file {
+        position: relative;
+	    display: inline-block;
+	    cursor: pointer;
+	    outline: none;
+	    text-decoration: none;
+	    color: $bg-order;
+	    text-align: center;
+        background: rgba(255, 255, 255, 0.85);
+        font: 300 15px 'Roboto', sans-serif;  
+        line-height: 18px;
+        text-transform: uppercase;
+        width: 100%;
+	    padding: 12px 0;
+	    box-sizing: border-box;
+        border-radius: 3px;
+	    border: 2px solid $cl-wt;
+	    transition: all 0.3s ease;
+
+        &:hover {
+            background: rgba(255, 255, 255, 1);
+            border: 2px solid $cl-bl;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 17.14px;
+            height: 20px;
+            background-image: url('../icons/order-file.svg');
+            left: 28%;
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            @media (max-width: 1125px) {
+                left: 20%;
+            }
+        }
+    }
+
+    &__button {
+        width: 100%;
+        margin-top: 15px;
+        padding: 15px 0;
+    }
+}
+
+.footer {
+    background-color: $bg-footer;
+    padding: 30px 0;
+
+    &__list {
+        @include flex-cont($jus: space-between);
+        color: $cl-wt;
+
+        @media (max-width: 1125px) {
+            @include flex-cont($dir: column);
+        }
+    }
+
+    &__item {
+        &_line {
+            width: 1px;
+            height: 18px;
+            border-right: 1px solid $cl-wt;
+
+            &_1 {
+                margin: 0 35px 0 72px;
+            }
+
+            &_2 {
+                margin: 0 35px;
+            }
+
+            @media (max-width: 1208px) {
+                &_1 {
+                    margin: 0 35px 0 40px;
+                }
+            }
+
+            @media (max-width: 1174px) {
+                &_1 {
+                    margin: 0 25px;
+                }
+                
+                &_2 {
+                    margin: 0 25px;
+                }
+            }
+
+            @media (max-width: 1125px) {
+                display: none;
+            }
+        }
+
+        @media (max-width: 1125px) {
+            margin: 20px 0;
+        }
+    }
+
+    &__text-transform {
+        text-transform: uppercase;
+    }
+
+    &__link {
+        padding-left: 30px;
+        position: relative;
+        transition: all 0.4s ease;
+
+        &:hover {
+            color: $cl-bl;
+        }
+
+        &:not(:last-child) {
+            margin-right: 38px;
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            left: 0;
+            top: -2px;
+        }
+
+        &_wallet {
+            color: $cl-gr;
+
+            &_1::before {
+                background-image: url('../icons/footer-wallet1.svg');
+            }
+
+            &_2::before {
+                background-image: url('../icons/footer-wallet2.svg');
+            }
+
+            &_3::before {
+                background-image: url('../icons/footer-wallet3.svg');
+            }
+        }
+
+        &_social {
+            color: $cl-wt;
+
+            &_1::before {
+                background-image: url('../icons/footer-contact1.svg');
+            }
+
+            &_2::before {
+                background-image: url('../icons/footer-contact2.svg');
+            }
+        }
+    }
+}
+
+

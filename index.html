@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+</head>
+<body>
+
+    <div class="site">
+        <header class="header">
+            <div class="container header__container">
+                <a href="#" class="logo">
+                    <img src="./assets/icons/logo.svg" alt="Company logo" class="logo__img">
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#" class="nav__link nav__link_active">Product</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Community</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Price</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="promo">
+                <div class="container promo__container">
+                    <h1 class="promo__title"><span class="text-color">Lorem ipsum</span> dolor sit<br>amet consectetur <span class="text-color">adipiscing</span></h1>
+                    <div class="promo__description">
+                        <div class="promo__text">At vero eos et accusamus et iusto odio dignissimos ducimus!</div>
+                        <ul class="promo__list">
+                            <li class="promo__item">Totam rem aperiam eaque ipsa</li>
+                            <li class="promo__item">Sit voluptatem accusantium doloremque laudantium</li>
+                            <li class="promo__item">Sed ut perspiciatis, unde omnis iste natus error</li>
+                        </ul>
+                    </div>
+                    <div class="promo__btn-container">
+                        <button class="button promo__button">Order</button>
+                        <button class="button button_white">More info</button>
+                    </div>        
+                </div>
+            </section>
+            <section class="order">
+                <div class="container order__container">
+                    <h2 class="title order__title">Making <span class="text-color">an order</span></h2>
+                    <div class="subtitle order__subtitle">Before filling out the form, check out our work scheme!</div>
+                    <div class="order__steps-wrapper">
+                        <div class="order__step order__step_1">
+                            <div class="order__icon order__icon_1"></div>
+                            <div class="order__description">Lorem ipsum dolor sit amet</div>
+                        </div>
+                        <span class="order__dotted"></span>
+                        <div class="order__step order__step_2">
+                            <div class="order__icon order__icon_2"></div>
+                            <div class="order__description">Сonsecteturadipiscing elit</div>
+                        </div>
+                        <div class="order__step order__step_3">
+                            <div class="order__icon order__icon_3"></div>
+                            <div class="order__description">Sed do eiusmod tempor</div>
+                        </div>
+                        <div class="order__step order__step_4">
+                            <div class="order__icon order__icon_4"></div>
+                            <div class="order__description">Esse cillum dolore eu fugiat</div>
+                        </div>
+                        <div class="order__step order__step_5">
+                            <div class="order__icon order__icon_5"></div>
+                            <div class="order__description">Excepteur sint occaecat cupidatat non proident</div>
+                        </div>
+                    </div>
+                    <form method="POST" name="order" class="form">
+                        <div class="form__item">
+                            <select class="form__select" name="Select the system type">
+                              <option>Sed ut perspiciatis</option>
+                              <option>Nemo enim ipsam</option>
+                              <option>Et harum quidem</option>
+                              <option>Temporibus autem</option>
+                              <option>Itaque earum rerum</option>
+                              <option>Sed ut perspiciatis</option>
+                              <option>Nemo enim ipsam</option>
+                              <option>Et harum quidem</option>
+                              <option>Temporibus autem</option>
+                              <option>Itaque earum rerum</option>
+                              <option>Sed ut perspiciatis</option>
+                              <option>Nemo enim ipsam</option>
+                              <option>Et harum quidem</option>
+                            </select>
+                        </div>
+                        <div class="form__item">
+                            <input type="text" placeholder="Your e-mail" id="forEmail" class="form__input  form__input_email" name="email" />
+                        </div>
+                        <div class="form__item">
+                            <input type="text" placeholder="Your name" id="forName" class="form__input  form__input_name" name="name" />
+                        </div>
+                        <div class="form__item form__item_4">
+                            <label for="forRange" class="form__label">
+                                <span class="form__description">Sed ut perspiciatis, unde omnis iste natus</span>
+                                <span class="form__percents">75%</span>
+                            </label>
+                            <input type="range" min="1" max="100" value="75" id="forRange" class="form__input  form__input_range" name="range"/>
+                        </div>
+                        <div class="form__item form__item_5">
+                            <input type="file" class="form__input form__input_file" name="forFile">
+                            <span class="form__btn-file">Attach a file</span>
+                        </div>
+                        <div class="form__item form__item_6">
+                            <button type="submit" class="button form__button">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="container footer__container">
+                <ul class="footer__list">
+                    <li class="footer__item">© 2022 <span class="footer__text-transform">«LoremIpsum»</span> Все права защищены.</li>
+                    <li class="footer__item footer__item_line footer__item_line_1"></li>
+                    <li class="footer__item">
+                        <a href="https://qiwi.com/" class="footer__link footer__link_wallet footer__link_wallet_1">QIWI wallet</a>
+                        <a href="https://yoomoney.ru/" class="footer__link footer__link_wallet footer__link_wallet_2">Yandex Money</a>
+                        <a href="https://www.webmoney.ru/" class="footer__link footer__link_wallet footer__link_wallet_3">Web Money</a>
+                    </li>
+                    <li class="footer__item footer__item_line footer__item_line_2"></li>
+                    <li class="footer__item">
+                        <a href="mailto:info@ipsum.com" class="footer__link footer__link_social footer__link_social_1">info@ipsum.com</a>
+                        <a href="https://vk.com/" class="footer__link footer__link_social footer__link_social_2">Мы вконтакте</a>
+                    </li>
+                </ul>    
+            </div>
+        </footer>
+
+    </div>
+    
+    <script src="assets/js/inex.js"></script>
+</body>
+</html>

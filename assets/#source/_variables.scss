@@ -1,0 +1,16 @@
+$cl-blk: #2A2B30;
+$cl-bl: #07C8C8;
+$cl-wt: #FFFFFF;
+$cl-d-gr: #BBBBBB;
+$cl-gr: #C3C3C3;
+
+$bg-header: rgba(16, 16, 29, 0.9);
+$bg-order:#272733;
+$bg-footer: #3D4050;
+
+@mixin flex-cont($dir: row, $jus: center, $ali: center) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $jus;
+    align-items: $ali;
+}
