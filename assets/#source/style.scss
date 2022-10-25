@@ -60,19 +60,40 @@
     background-repeat: no-repeat;
     z-index: 9999;
     
-
     &__title {
         font-weight: 700;
         font-size: 48px;
         line-height: 58px;
         text-transform: uppercase;
         margin-bottom: 90px;
+
+        @media (max-width: 953px) {
+            margin-bottom: 50px;
+            font-size: 35px;
+            line-height: 45px;    
+        }
+
+        @media (max-width: 450px) {
+            font-size: 30px;
+            line-height: 40px;    
+        }
     }
 
     &__description {
         font-size: 20px;
         line-height: 24px;
         margin-bottom: 80px;
+
+        @media (max-width: 953px) {
+            font-size: 18px;
+            line-height: 22px;
+            margin-bottom: 40px;   
+        }
+
+        @media (max-width: 953px) {
+            font-size: 16px;
+            line-height: 20px;    
+        }
     }
 
     &__text {
@@ -87,6 +108,15 @@
 
     &__button {
         margin-right: 25px;
+
+        @media (max-width: 953px) {
+            margin-bottom: 20px;    
+        }
+    }
+
+    @media (max-width: 953px) {
+        padding: 153px 0 103px 0;
+        background-position: -20px -290px;    
     }
 }
 
@@ -145,6 +175,10 @@
         @media (max-width: 740px) {
             @include flex-cont($dir: column, $jus: flex-start);
         }
+
+        @media (max-width: 740px) {
+            margin-bottom: 10px;
+        }
     }
 
 	&__step {
@@ -154,6 +188,12 @@
         @media (max-width: 740px) {
             width: 70%;
             margin-bottom: 50px;
+            @include flex-cont($dir: row, $jus: flex-start);
+        }
+
+        @media (max-width: 616px) {
+            width: 100%;
+            margin-bottom: 20px;
             @include flex-cont($dir: row, $jus: flex-start);
         }
 	}
@@ -240,6 +280,7 @@
 
         @media (max-width: 870px) {
             font-size: 14px;
+            padding: 0  0 0 22px;
         }
 	}
 
@@ -268,6 +309,24 @@
             left: -10%;
             top: 270px;
         }
+
+        @media (max-width: 706px) {
+            width: 62%;
+            left: -11%;
+        }
+
+        @media (max-width: 658px) {
+            width: 68%;
+            left: -13%;
+        }
+
+        @media (max-width: 614px) {
+            display: none;
+        }
+    }
+
+    @media (max-width: 953px) {
+        padding: 60px 0;    
     }
 }
 
@@ -276,6 +335,10 @@
     line-height: 42px;
     text-transform: uppercase;
     margin-bottom: 28px;
+
+    @media (max-width: 953px) {
+        font-size: 25px;    
+    }
 }
 
 .subtitle {
@@ -283,6 +346,14 @@
     line-height: 24px;
     color: $cl-d-gr;
     margin-bottom: 80px;
+
+    @media (max-width: 953px) {
+        font-size: 18px;    
+    }
+
+    @media (max-width: 740px) {
+        margin-bottom: 40px;
+    }
 }
 
 .form {
@@ -305,6 +376,24 @@
         &_6 {
             grid-column-start: 2;
             grid-column-end: 3;
+        }
+
+        @media (max-width: 740px) {
+            &_4 {
+                grid-column: span 1;
+            }
+
+            &_5 {
+                margin: 0 auto;
+                width: 300px;
+            }
+    
+            &_6 {
+                margin: 0 auto;
+                width: 300px;
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }
         }
     }
 
@@ -335,7 +424,6 @@
         }
 
         &_range {
-            -webkit-appearance: none;
             width: 100%;
             height: 6px !important;
             padding: 0;
@@ -444,6 +532,10 @@
             @media (max-width: 1125px) {
                 left: 20%;
             }
+
+            @media (max-width: 768px) {
+                left: 15%;
+            }
         }
     }
 
@@ -451,6 +543,14 @@
         width: 100%;
         margin-top: 15px;
         padding: 15px 0;
+    }
+
+    @media (max-width: 740px) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 30px;
+        width: 100%;
     }
 }
 
@@ -533,6 +633,8 @@
             background-size: cover;
             left: 0;
             top: -2px;
+
+ 
         }
 
         &_wallet {
@@ -549,6 +651,7 @@
             &_3::before {
                 background-image: url('../icons/footer-wallet3.svg');
             }
+
         }
 
         &_social {
@@ -561,6 +664,11 @@
             &_2::before {
                 background-image: url('../icons/footer-contact2.svg');
             }
+        }
+
+        @media (max-width: 422px) {
+            display: flex;
+            margin-bottom: 10px;
         }
     }
 }
